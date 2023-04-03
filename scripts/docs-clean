@@ -1,0 +1,5 @@
+#!/bin/bash
+rm -rf /app/docs/source/apidoc
+pushd /app/docs
+make clean
+popd

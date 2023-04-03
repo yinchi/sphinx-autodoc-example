@@ -1,0 +1,23 @@
+services:
+  bash: # docker compose run --rm bash 
+    image: sphinx-autodoc-bash
+    volumes:
+      - ./app:/app
+      - ./scripts:/scripts
+    build:
+      context: .
+      dockerfile: base.Dockerfile
+  sphinx: # docker compose up sphinx -d
+    image: sphinx-autodoc-bash
+    volumes:
+      - ./app:/app
+      - ./scripts:/scripts
+    command:
+      - /bin/bash
+      - -c
+      - |
+        docs-clean
+        docs-build
+        docs-serve
+    ports:
+      - "8000:8000"

@@ -1,0 +1,9 @@
+# Local:
+#   pip-compile --upgrade requirements.in
+#   pip-sync
+# Dockerfile:
+#   pip install -r requirements.txt
+sphinx
+sphinx_rtd_theme
+pandas
+sphobjinv

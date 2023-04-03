@@ -1,0 +1,7 @@
+#!/bin/bash
+pushd /app
+sphinx-apidoc -fe -o ./docs/source/apidoc ./my_package/
+popd
+pushd /app/docs
+make html
+popd

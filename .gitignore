@@ -1,0 +1,4 @@
+.venv
+.vscode
+app/docs/build
+__pycache__
